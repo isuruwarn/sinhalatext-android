@@ -8,47 +8,14 @@ import android.view.MenuItem;
 import android.widget.EditText;
 
 
-public class EditorMainActivity extends ActionBarActivity { //implements TextView.OnEditorActionListener {
+public class EditorMainActivity extends ActionBarActivity {
 
     private static final String TAG = "EditorMainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editor_main);
-
-        //Log.d(TAG, "onCreateeeeeeeeeeeeeeeeeeee");
-        //final SinEditText editTextMain = (SinEditText) findViewById(R.id.editTextMain);
-
-        /*
-        editTextMain.setOnEditorActionListener( new TextView.OnEditorActionListener() {
-
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                Log.i(TAG, "DEBUG MESSAGE KEYYYYYYYYYYYYYYY " + event.getUnicodeChar() );
-                return false;
-            }
-        });
-        */
-
-
-        /*
-        editTextMain.addTextChangedListener( new TextWatcher() {
-
-            public void afterTextChanged(Editable s) {
-
-            }
-
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                editTextMain.setText(s);
-            }
-        });
-        */
     }
 
 
@@ -120,14 +87,5 @@ public class EditorMainActivity extends ActionBarActivity { //implements TextVie
 
         return super.dispatchKeyEvent(event);
     }
-
-    /*
-    @Override
-    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-
-        Log.i(TAG, "DEBUG MESSAGE KEYYYYYYYYYYYYYYY " + event.getUnicodeChar() );
-        return false;
-    }
-    */
 
 }

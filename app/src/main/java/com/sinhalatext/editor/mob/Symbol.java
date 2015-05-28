@@ -112,7 +112,6 @@ public enum Symbol {
         return HTMLCODE;
     }
 
-
     public String getKeyCode() {
         return KEYCODE;
     }

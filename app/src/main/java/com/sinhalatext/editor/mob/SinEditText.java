@@ -33,35 +33,9 @@ public class SinEditText extends EditText {
         mContext = context;
     }
 
-    /*
-    @Override
-    public boolean onKeyPreIme(int keyCode, KeyEvent event) {
-
-        Log.i(TAG, "onKeyPreImeeeeeeeeeee");
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-
-            //hide keyboard
-            InputMethodManager mgr = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
-            mgr.hideSoftInputFromWindow(this.getWindowToken(), 0);
-
-            //lose focus
-            this.clearFocus();
-
-            return true;
-        }
-        return false;
-    }
-    */
-
-/*
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        Log.i(TAG, "onKeyDownnnnnnnnnnnn");
-        return true;
-    }
-*/
 
     public InputConnection onCreateInputConnection(EditorInfo outAttrs) {
-        //Log.d(TAG, "onCreateInputConnectionnnnn");
+        //Log.d(TAG, "onCreateInputConnection...");
         BaseInputConnection fic = new BaseInputConnection(this, false);
         outAttrs.actionLabel = null;
         outAttrs.inputType = InputType.TYPE_NULL;
