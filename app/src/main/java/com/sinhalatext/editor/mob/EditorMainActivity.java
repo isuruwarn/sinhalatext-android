@@ -1,10 +1,14 @@
 package com.sinhalatext.editor.mob;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 
 
@@ -86,6 +90,29 @@ public class EditorMainActivity extends ActionBarActivity {
         }
 
         return super.dispatchKeyEvent(event);
+    }
+
+
+    public void selectAll(View view) {
+        EditText editTextMain = (EditText) findViewById( R.id.editTextMain );
+        editTextMain.selectAll();
+    }
+
+    public void clearText(View view) {
+        EditText editTextMain = (EditText) findViewById( R.id.editTextMain );
+        editTextMain.setText("");
+    }
+
+    public void copyText(View view) {
+        EditText editTextMain = (EditText) findViewById( R.id.editTextMain );
+        editTextMain.selectAll();
+
+        // get handle to the clipboard service
+        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+
+        // place text on the clipboard
+        ClipData clip = ClipData.newPlainText("sinhala text", editTextMain.getText() );
+        clipboard.setPrimaryClip(clip);
     }
 
 }

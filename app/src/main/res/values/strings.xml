@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Sinhala Text</string>
-
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="btn_select_all">Select All</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_copy">Copy</string>
+    <string name="sintext_hint">ලියන්න...</string>
+    <string name="sym_al_lakuna">්</string>
+    <string name="sym_al_lakuna_hint">AL_LAKUNA</string>
+    <string name="sym_aela_pilla">ා</string>
+    <string name="sym_aela_pilla_hint">AELA_PILLA</string>
 </resources>
