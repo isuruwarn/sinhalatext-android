@@ -9,6 +9,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 
@@ -75,16 +76,8 @@ public class EditorMainActivity extends ActionBarActivity {
 
                 String newSymbol = Symbol.getSymbol(keyUnicode);
                 //Log.d(TAG, "Key pressed=" + keyPressed + " newSymbol=" + newSymbol);
-
                 EditText editTextMain = (EditText) findViewById( R.id.editTextMain );
-                int startPos = editTextMain.getSelectionStart();
-                int endPos = editTextMain.getSelectionEnd();
-                int lengthBefore = editTextMain.getText().length();
-                String head = editTextMain.getText().subSequence(0, startPos).toString();
-                String tail = editTextMain.getText().subSequence(endPos, lengthBefore).toString();
-                String updatedText = head + newSymbol + tail;
-                editTextMain.setText(updatedText);
-                editTextMain.setSelection(startPos + newSymbol.length());
+                updateText( editTextMain, newSymbol );
                 return false;
             }
         }
@@ -113,6 +106,26 @@ public class EditorMainActivity extends ActionBarActivity {
         // place text on the clipboard
         ClipData clip = ClipData.newPlainText("sinhala text", editTextMain.getText() );
         clipboard.setPrimaryClip(clip);
+    }
+
+    public void insertSymbol(View view) {
+        Button b = (Button) view;
+        String newSymbol = b.getText().toString();
+        EditText editTextMain = (EditText) findViewById( R.id.editTextMain );
+        updateText( editTextMain, newSymbol );
+    }
+
+
+
+    private void updateText( EditText editText, String str ) {
+        int startPos = editText.getSelectionStart();
+        int endPos = editText.getSelectionEnd();
+        int lengthBefore = editText.getText().length();
+        String head = editText.getText().subSequence(0, startPos).toString();
+        String tail = editText.getText().subSequence(endPos, lengthBefore).toString();
+        String updatedText = head + str + tail;
+        editText.setText(updatedText);
+        editText.setSelection(startPos + str.length());
     }
 
 }

@@ -1,12 +1,83 @@
 <resources>
+
     <string name="app_name">Sinhala Text</string>
     <string name="action_settings">Settings</string>
     <string name="btn_select_all">Select All</string>
     <string name="btn_clear">Clear</string>
     <string name="btn_copy">Copy</string>
     <string name="sintext_hint">ලියන්න...</string>
-    <string name="sym_al_lakuna">්</string>
-    <string name="sym_al_lakuna_hint">AL_LAKUNA</string>
+
+    <string name="sym_yansaya">්‍ය</string>
+    <string name="sym_yansaya_hint">YANSAYA</string>
+
+    <string name="sym_rakayansaya">්‍ර</string>
+    <string name="sym_rakayansaya_hint">RAKAYANSAYA</string>
+
+    <string name="sym_ksha">ක්‍ෂ</string>
+    <string name="sym_ksha_hint">KSHA</string>
+
+    <string name="sym_thaluja_nasikaya">ඤ</string>
+    <string name="sym_thaluja_nasikaya_hint">THALUJA_NASIKAYA</string>
+
+    <string name="sym_sanyoga_nasikaya">ඥ</string>
+    <string name="sym_sanyoga_nasikaya_hint">SANYOGA_NASIKAYA</string>
+
+    <string name="sym_iruyanna">ඍ</string>
+    <string name="sym_iruyanna_hint">IRUYANNA</string>
+
     <string name="sym_aela_pilla">ා</string>
     <string name="sym_aela_pilla_hint">AELA_PILLA</string>
+
+    <string name="sym_al_lakuna">්</string>
+    <string name="sym_al_lakuna_hint">AL_LAKUNA</string>
+
+    <string name="sym_ketti_is_pilla">ි</string>
+    <string name="sym_ketti_is_pilla_hint">KETTI_IS_PILLA</string>
+
+    <string name="sym_diga_is_pilla">ී</string>
+    <string name="sym_diga_is_pilla_hint">DIGA_IS_PILLA</string>
+
+    <string name="sym_kombuva">ෙ</string>
+    <string name="sym_kombuva_hint">KOMBUVA</string>
+
+    <string name="sym_diga_kombuva">ේ</string>
+    <string name="sym_diga_kombuva_hint">DIGA_KOMBUVA</string>
+
+    <string name="sym_kombuva_haa_aela_pilla">ො</string>
+    <string name="sym_kombuva_haa_aela_pilla_hint">KOMBUVA_HAA_AELA_PILLA</string>
+
+    <string name="sym_kombuva_haa_diga_aela_pilla">ෝ</string>
+    <string name="sym_kombuva_haa_diga_aela_pilla_hint">KOMBUVA_HAA_DIGA_AELA_PILLA</string>
+
+    <string name="sym_paa_pilla">ු</string>
+    <string name="sym_paa_pilla_hint">PAA_PILLA</string>
+
+    <string name="sym_diga_paa_pilla">ූ</string>
+    <string name="sym_diga_paa_pilla_hint">DIGA_PAA_PILLA</string>
+
+    <string name="sym_aeda_pilla">ැ</string>
+    <string name="sym_aeda_pilla_hint">AEDA_PILLA</string>
+
+    <string name="sym_diga_aeda_pilla">ෑ</string>
+    <string name="sym_diga_aeda_pilla_hint">DIGA_AEDA_PILLA</string>
+
+    <string name="sym_kombu_deka">ෛ</string>
+    <string name="sym_kombu_deka_hint">KOMBU_DEKA</string>
+
+    <string name="sym_gaetta_pilla">ෘ</string>
+    <string name="sym_gaetta_pilla_hint">GAETTA_PILLA</string>
+
+    <string name="sym_diga_gaetta_pilla">ෲ</string>
+    <string name="sym_diga_gaetta_pilla_hint">DIGA_GAETTA_PILLA</string>
+
+    <string name="sym_gayanukitta">ෟ</string>
+    <string name="sym_gayanukitta_hint">GAYANUKITTA</string>
+
+    <string name="sym_diga_gayanukitta">ෳ</string>
+    <string name="sym_diga_gayanukitta_hint">DIGA_GAYANUKITTA</string>
+
+    <string name="sym_kombuva_haa_gayanukitta">ෞ</string>
+    <string name="sym_kombuva_haa_gayanukitta_hint">KOMBUVA_HAA_GAYANUKITTA</string>
+
+
 </resources>
