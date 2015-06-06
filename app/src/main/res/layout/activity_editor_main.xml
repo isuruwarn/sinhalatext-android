@@ -3,25 +3,25 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".EditorMainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".EditorMainActivity"
+    android:background="#F2F2F2">
 
     <com.sinhalatext.editor.mob.SinEditText
-        android:inputType="textMultiLine"
-        android:lines="8"
-        android:minLines="10"
-        android:gravity="top|left"
-        android:maxLines="10"
+        android:lines="25"
+        android:gravity="start"
         android:scrollbars="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:id="@+id/editTextMain"
         android:hint="@string/sintext_hint"
-        android:layout_below="@+id/sym_btn_16"
+        android:layout_below="@+id/table_layout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:background="#FFFFFF" />
+
 
     <Button
         android:layout_width="wrap_content"
@@ -52,297 +52,267 @@
         android:layout_toRightOf="@+id/btn_clear"
         android:layout_toEndOf="@+id/btn_clear" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_yansaya"
-        android:id="@+id/sym_btn_0"
-        android:hint="@string/sym_yansaya_hint"
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/table_layout"
+        android:stretchColumns="*"
+        android:weightSum="6"
         android:layout_below="@+id/btn_select_all"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:onClick="insertSymbol" />
+        android:layout_alignParentLeft="true">
+
+        <TableRow android:layout_weight="1" >
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_yansaya"
+                android:id="@+id/sym_btn_0"
+                android:hint="@string/sym_yansaya_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_rakayansaya"
-        android:id="@+id/sym_btn_1"
-        android:hint="@string/sym_rakayansaya_hint"
-        android:layout_below="@+id/btn_select_all"
-        android:layout_toRightOf="@+id/sym_btn_0"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_rakayansaya"
+                android:id="@+id/sym_btn_1"
+                android:hint="@string/sym_rakayansaya_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_ksha"
-        android:id="@+id/sym_btn_2"
-        android:hint="@string/sym_ksha_hint"
-        android:layout_below="@+id/btn_select_all"
-        android:layout_toRightOf="@+id/sym_btn_1"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_ksha"
+                android:id="@+id/sym_btn_2"
+                android:hint="@string/sym_ksha_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_thaluja_nasikaya"
-        android:id="@+id/sym_btn_3"
-        android:hint="@string/sym_thaluja_nasikaya_hint"
-        android:layout_below="@+id/btn_select_all"
-        android:layout_toRightOf="@+id/sym_btn_2"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_thaluja_nasikaya"
+                android:id="@+id/sym_btn_3"
+                android:hint="@string/sym_thaluja_nasikaya_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_sanyoga_nasikaya"
-        android:id="@+id/sym_btn_4"
-        android:hint="@string/sym_sanyoga_nasikaya_hint"
-        android:layout_below="@+id/btn_select_all"
-        android:layout_toRightOf="@+id/sym_btn_3"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_sanyoga_nasikaya"
+                android:id="@+id/sym_btn_4"
+                android:hint="@string/sym_sanyoga_nasikaya_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_iruyanna"
-        android:id="@+id/sym_btn_5"
-        android:hint="@string/sym_iruyanna_hint"
-        android:layout_below="@+id/btn_select_all"
-        android:layout_toRightOf="@+id/sym_btn_4"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_iruyanna"
+                android:id="@+id/sym_btn_5"
+                android:hint="@string/sym_iruyanna_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_aela_pilla"
-        android:id="@+id/sym_btn_6"
-        android:hint="@string/sym_aela_pilla_hint"
-        android:layout_below="@+id/btn_select_all"
-        android:layout_toRightOf="@+id/sym_btn_5"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_aela_pilla"
+                android:id="@+id/sym_btn_6"
+                android:hint="@string/sym_aela_pilla_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_al_lakuna"
-        android:id="@+id/sym_btn_7"
-        android:hint="@string/sym_al_lakuna_hint"
-        android:layout_below="@+id/btn_select_all"
-        android:layout_toRightOf="@+id/sym_btn_6"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_al_lakuna"
+                android:id="@+id/sym_btn_7"
+                android:hint="@string/sym_al_lakuna_hint"
+                android:onClick="insertSymbol" />
+
+        </TableRow>
+
+        <TableRow android:layout_weight="1" >
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_ketti_is_pilla"
+                android:id="@+id/sym_btn_8"
+                android:hint="@string/sym_ketti_is_pilla_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_ketti_is_pilla"
-        android:id="@+id/sym_btn_8"
-        android:hint="@string/sym_ketti_is_pilla_hint"
-        android:layout_below="@+id/sym_btn_0"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_diga_is_pilla"
+                android:id="@+id/sym_btn_9"
+                android:hint="@string/sym_diga_is_pilla_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_diga_is_pilla"
-        android:id="@+id/sym_btn_9"
-        android:hint="@string/sym_diga_is_pilla_hint"
-        android:layout_below="@+id/sym_btn_0"
-        android:layout_toRightOf="@+id/sym_btn_8"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_kombuva"
+                android:id="@+id/sym_btn_10"
+                android:hint="@string/sym_kombuva_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_kombuva"
-        android:id="@+id/sym_btn_10"
-        android:hint="@string/sym_kombuva_hint"
-        android:layout_below="@+id/sym_btn_0"
-        android:layout_toRightOf="@+id/sym_btn_9"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_diga_kombuva"
+                android:id="@+id/sym_btn_11"
+                android:hint="@string/sym_diga_kombuva_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_diga_kombuva"
-        android:id="@+id/sym_btn_11"
-        android:hint="@string/sym_diga_kombuva_hint"
-        android:layout_below="@+id/sym_btn_0"
-        android:layout_toRightOf="@+id/sym_btn_10"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_kombuva_haa_aela_pilla"
+                android:id="@+id/sym_btn_12"
+                android:hint="@string/sym_kombuva_haa_aela_pilla_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_kombuva_haa_aela_pilla"
-        android:id="@+id/sym_btn_12"
-        android:hint="@string/sym_kombuva_haa_aela_pilla_hint"
-        android:layout_below="@+id/sym_btn_0"
-        android:layout_toRightOf="@+id/sym_btn_11"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_kombuva_haa_diga_aela_pilla"
+                android:id="@+id/sym_btn_13"
+                android:hint="@string/sym_kombuva_haa_diga_aela_pilla_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_kombuva_haa_diga_aela_pilla"
-        android:id="@+id/sym_btn_13"
-        android:hint="@string/sym_kombuva_haa_diga_aela_pilla_hint"
-        android:layout_below="@+id/sym_btn_0"
-        android:layout_toRightOf="@+id/sym_btn_12"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_paa_pilla"
+                android:id="@+id/sym_btn_14"
+                android:hint="@string/sym_paa_pilla_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_paa_pilla"
-        android:id="@+id/sym_btn_14"
-        android:hint="@string/sym_paa_pilla_hint"
-        android:layout_below="@+id/sym_btn_0"
-        android:layout_toRightOf="@+id/sym_btn_13"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_diga_paa_pilla"
+                android:id="@+id/sym_btn_15"
+                android:hint="@string/sym_diga_paa_pilla_hint"
+                android:onClick="insertSymbol" />
+
+        </TableRow>
+
+        <TableRow android:layout_weight="1" >
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_diga_paa_pilla"
-        android:id="@+id/sym_btn_15"
-        android:hint="@string/sym_diga_paa_pilla_hint"
-        android:layout_below="@+id/sym_btn_0"
-        android:layout_toRightOf="@+id/sym_btn_14"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_aeda_pilla"
+                android:id="@+id/sym_btn_16"
+                android:hint="@string/sym_aeda_pilla_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_aeda_pilla"
-        android:id="@+id/sym_btn_16"
-        android:hint="@string/sym_aeda_pilla_hint"
-        android:layout_below="@+id/sym_btn_8"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_diga_aeda_pilla"
+                android:id="@+id/sym_btn_17"
+                android:hint="@string/sym_diga_aeda_pilla_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_diga_aeda_pilla"
-        android:id="@+id/sym_btn_17"
-        android:hint="@string/sym_diga_aeda_pilla_hint"
-        android:layout_below="@+id/sym_btn_8"
-        android:layout_toRightOf="@+id/sym_btn_16"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_kombu_deka"
+                android:id="@+id/sym_btn_18"
+                android:hint="@string/sym_kombu_deka_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_kombu_deka"
-        android:id="@+id/sym_btn_18"
-        android:hint="@string/sym_kombu_deka_hint"
-        android:layout_below="@+id/sym_btn_8"
-        android:layout_toRightOf="@+id/sym_btn_17"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_gaetta_pilla"
+                android:id="@+id/sym_btn_19"
+                android:hint="@string/sym_gaetta_pilla_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_gaetta_pilla"
-        android:id="@+id/sym_btn_19"
-        android:hint="@string/sym_gaetta_pilla_hint"
-        android:layout_below="@+id/sym_btn_8"
-        android:layout_toRightOf="@+id/sym_btn_18"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_diga_gaetta_pilla"
+                android:id="@+id/sym_btn_20"
+                android:hint="@string/sym_diga_gaetta_pilla_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_diga_gaetta_pilla"
-        android:id="@+id/sym_btn_20"
-        android:hint="@string/sym_diga_gaetta_pilla_hint"
-        android:layout_below="@+id/sym_btn_8"
-        android:layout_toRightOf="@+id/sym_btn_19"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_gayanukitta"
+                android:id="@+id/sym_btn_21"
+                android:hint="@string/sym_gayanukitta_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_gayanukitta"
-        android:id="@+id/sym_btn_21"
-        android:hint="@string/sym_gayanukitta_hint"
-        android:layout_below="@+id/sym_btn_8"
-        android:layout_toRightOf="@+id/sym_btn_20"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_diga_gayanukitta"
+                android:id="@+id/sym_btn_22"
+                android:hint="@string/sym_diga_gayanukitta_hint"
+                android:onClick="insertSymbol" />
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_diga_gayanukitta"
-        android:id="@+id/sym_btn_22"
-        android:hint="@string/sym_diga_gayanukitta_hint"
-        android:layout_below="@+id/sym_btn_8"
-        android:layout_toRightOf="@+id/sym_btn_21"
-        android:onClick="insertSymbol" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/sym_kombuva_haa_gayanukitta"
+                android:id="@+id/sym_btn_23"
+                android:hint="@string/sym_kombuva_haa_gayanukitta_hint"
+                android:onClick="insertSymbol" />
 
+        </TableRow>
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/sym_kombuva_haa_gayanukitta"
-        android:id="@+id/sym_btn_23"
-        android:hint="@string/sym_kombuva_haa_gayanukitta_hint"
-        android:layout_below="@+id/sym_btn_8"
-        android:layout_toRightOf="@+id/sym_btn_22"
-        android:onClick="insertSymbol" />
-
-
+    </TableLayout>
 
 
 
