@@ -7,6 +7,17 @@
     <string name="btn_copy">Copy</string>
     <string name="sintext_hint">ලියන්න...</string>
 
+    <string-array name="font_size_array">
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+        <item>20</item>
+        <item>22</item>
+        <item>24</item>
+        <item>26</item>
+    </string-array>
+
     <string name="sym_yansaya">්‍ය</string>
     <string name="sym_yansaya_hint">YANSAYA</string>
 
@@ -78,6 +89,7 @@
 
     <string name="sym_kombuva_haa_gayanukitta">ෞ</string>
     <string name="sym_kombuva_haa_gayanukitta_hint">KOMBUVA_HAA_GAYANUKITTA</string>
+    <string name="lbl_font_size">Size</string>
 
 
 </resources>
