@@ -6,6 +6,7 @@
     <string name="btn_clear">Clear</string>
     <string name="btn_copy">Copy</string>
     <string name="sintext_hint">ලියන්න...</string>
+    <string name="lbl_font_size">Font Size</string>
 
     <string-array name="font_size_array">
         <item>12</item>
@@ -89,7 +90,7 @@
 
     <string name="sym_kombuva_haa_gayanukitta">ෞ</string>
     <string name="sym_kombuva_haa_gayanukitta_hint">KOMBUVA_HAA_GAYANUKITTA</string>
-    <string name="lbl_font_size">Size</string>
+
 
 
 </resources>

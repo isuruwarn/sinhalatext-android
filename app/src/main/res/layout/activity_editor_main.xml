@@ -316,11 +316,21 @@
 
     <Spinner
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:layout_above="@+id/table_layout"
-        android:layout_toRightOf="@+id/btn_copy"
+        android:layout_height="45dp"
+        android:id="@+id/spnr_font_size"
         android:entries="@array/font_size_array"
-        android:prompt="@string/lbl_font_size" />
+        android:layout_toRightOf="@+id/lbl_font_size"
+        android:layout_toEndOf="@+id/lbl_font_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/lbl_font_size"
+        android:id="@+id/lbl_font_size"
+        android:layout_toRightOf="@+id/btn_copy"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:paddingLeft="10dp" />
 
 </RelativeLayout>

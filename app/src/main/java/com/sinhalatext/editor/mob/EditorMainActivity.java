@@ -9,8 +9,11 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 
 public class EditorMainActivity extends ActionBarActivity {
@@ -21,6 +24,9 @@ public class EditorMainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editor_main);
+        Spinner spnrFontSize = (Spinner) findViewById(R.id.spnr_font_size);
+        spnrFontSize.setOnItemSelectedListener( new FontSizeOnItemSelectedListener() );
+        spnrFontSize.setSelection(2);
     }
 
 
@@ -126,6 +132,24 @@ public class EditorMainActivity extends ActionBarActivity {
         String updatedText = head + str + tail;
         editText.setText(updatedText);
         editText.setSelection(startPos + str.length());
+    }
+
+
+
+    class FontSizeOnItemSelectedListener implements OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view, int pos,long id) {
+            EditText editTextMain = (EditText) findViewById( R.id.editTextMain );
+            Spinner spnrFontSize = (Spinner) findViewById( R.id.spnr_font_size );
+            String fontSize = (String) spnrFontSize.getSelectedItem();
+            editTextMain.setTextSize( Float.valueOf(fontSize));
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> arg0) {
+
+        }
+
     }
 
 }
